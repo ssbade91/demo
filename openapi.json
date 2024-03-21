@@ -1,0 +1,47 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Sample API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/mockserver/v1/openapi/users": {
+            "post": {
+                "summary": "Create a new user",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "designation": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "id"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "User created successfully"
+                    },
+                    "400": {
+                        "description": "Invalid request payload"
+                    }
+                }
+            }
+        }
+    }
+}
