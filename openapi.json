@@ -5,7 +5,7 @@
         "version": "1.0.0"
     },
     "paths": {
-        "/mockserver/v1/openapi/users": {
+        "/mockserver/openapi/users": {
             "post": {
                 "summary": "Create a new user",
                 "requestBody": {
